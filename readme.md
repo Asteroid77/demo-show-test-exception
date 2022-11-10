@@ -21,7 +21,7 @@ public class DemoShowTestExceptionApplication {
 }
 ```
 
-##抛出该异常的原因
+## 抛出该异常的原因
 @ConditionalOnWebApplication这个注解指的是是"当前项目是Web项目时才会生效"。
 但如果这个注解是在A注解的内部，而这个A注解又作用于Application启动类的时候，那么此时Application类会在注释作用下成为当前项目是Web项目时才会生效。
 而Spring Boot Test运行的单测文件并非都有Web环境，这就会导致其默认状态下找不到Application类，需要手动指定classes。
